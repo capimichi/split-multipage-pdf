@@ -62,13 +62,12 @@ class SplitService:
                 left_image = image.crop((0, 0, found_x, height))
                 right_image = image.crop((found_x, 0, width, height))
                 
-                left_image.save(f"tmp/page_{image_index}_left.png", "PNG")
-                right_image.save(f"tmp/page_{image_index}_right.png", "PNG")
+                # left_image.save(f"tmp/page_{image_index}_left.png", "PNG")
+                # right_image.save(f"tmp/page_{image_index}_right.png", "PNG")
                 
                 output_images.append(left_image)
                 output_images.append(right_image)
-            else:
-                raise ValueError("No suitable split point found in the image.")
+            
 
             image_index += 1
         
