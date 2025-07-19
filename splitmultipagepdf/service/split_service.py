@@ -1,6 +1,7 @@
 from injector import inject
 from PyPDF2 import PdfReader
 from pdf2image import convert_from_path
+from tqdm import tqdm
 
 
 class SplitService:
@@ -16,7 +17,7 @@ class SplitService:
         output_images = []
 
         image_index = 0
-        for image in images:
+        for image in tqdm(images, desc="Splitting PDF pages", unit="page"):
             bw_image = image.convert('1')
             
             # Convert each pixel to black and white if average RGB value is above a threshold
