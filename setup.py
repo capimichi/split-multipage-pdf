@@ -17,5 +17,5 @@ setup(
             "splitmultipagepdf=splitmultipagepdf.cli:main",  # Assumendo che esista una funzione `main` nel modulo cli
         ],
     },
-    python_requires=">=3.12",  # Specifica la versione minima di Python richiesta
+    python_requires=">=3.11",  # Specifica la versione minima di Python richiesta
 )
